@@ -15,7 +15,7 @@ test('should generate set start date action object', () => {
   });
 });
 
-test('should generate set end date aciton object', () => {
+test('should generate set end date action object', () => {
   const action = setEndDate(moment(0));
   expect(action).toEqual({
     type: 'SET_END_DATE',
@@ -23,16 +23,16 @@ test('should generate set end date aciton object', () => {
   });
 });
 
-test('should generate set text filter object with text value', () => {
+test('should generate set text filter action object with text value', () => {
   const text = 'Something in';
   const action = setTextFilter(text);
   expect(action).toEqual({
     type: 'SET_TEXT_FILTER',
-    text
+    text: text
   });
 });
 
-test('should generate set text filter object with default', () => {
+test('should generate set text filter action object with default values', () => {
   const action = setTextFilter();
   expect(action).toEqual({
     type: 'SET_TEXT_FILTER',
@@ -40,7 +40,7 @@ test('should generate set text filter object with default', () => {
   });
 });
 
-test('should generate action object for sort by date', () => {
+test('should generate sort by date action object', () => {
   expect(sortByDate()).toEqual({ type: 'SORT_BY_DATE' });
 });
 

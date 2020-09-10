@@ -1,5 +1,5 @@
-import moment from 'moment';
 import selectExpenses from '../../selectors/expenses';
+import moment from 'moment';
 import expenses from '../fixtures/expenses';
 
 test('should filter by text value', () => {
@@ -9,6 +9,7 @@ test('should filter by text value', () => {
     startDate: undefined,
     endDate: undefined
   };
+
   const result = selectExpenses(expenses, filters);
   expect(result).toEqual([expenses[2], expenses[1]]);
 });
